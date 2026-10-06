@@ -1,0 +1,25 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group" style="padding-top:3rem;padding-bottom:3rem"><!-- wp:heading {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--display)"}}} -->
+<h2 class="wp-block-heading" style="font-family:var(--wp--preset--font-family--display)">Search the café</h2>
+<!-- /wp:heading -->
+
+<!-- wp:search {"label":"Search","buttonText":"Search"} /-->
+
+<!-- wp:query {"queryId":3,"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"date","inherit":true}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:post-title {"isLink":true,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--display)"}}} /-->
+<!-- wp:post-excerpt /-->
+<!-- wp:spacer {"height":"1.5rem"} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>Nothing on the menu by that name — try another search.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
