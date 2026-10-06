@@ -1,0 +1,193 @@
+/*
+Theme Name: Ember
+Theme URI: https://github.com/Nourhb/ember-coffeeshop-theme
+Author: Nour El Houda Bouajila
+Author URI: https://nour-el-houda-bouajila.rf.gd/
+Description: Ember is a warm, cozy Full Site Editing theme for coffee shops, cafes and roasteries. Espresso-brown and caramel tones, menu-board price lists, roast stories, barista team profiles and a visit-us block — everything a neighborhood café needs online.
+Version: 1.0.0
+Requires at least: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ember
+Tags: coffee-shop, cafe, restaurant, blog, full-site-editing, block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, sticky-post, threaded-comments, translation-ready, wide-blocks
+*/
+
+/* ---------------------------------------------------------
+   Ember — front-end layer
+   Warm hover states, menu-board styling, reveals, back-to-top.
+--------------------------------------------------------- */
+
+/* Smooth anchor scrolling for in-page menu links */
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+/* Menu board items: warm hover lift */
+.ember-menu-item {
+	transition: transform 0.25s ease, background-color 0.25s ease;
+	border-radius: 12px;
+}
+
+.ember-menu-item:hover {
+	transform: translateY(-3px);
+	background-color: rgba(201, 138, 61, 0.08);
+}
+
+/* Price leader dots row glow on hover */
+.ember-menu-item:hover .ember-dots {
+	color: var(--wp--preset--color--caramel);
+}
+
+/* Buttons: cozy lift */
+.wp-block-button .wp-block-button__link {
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 24px rgba(43, 29, 22, 0.22);
+}
+
+/* Gallery images: gentle zoom */
+.ember-gallery img {
+	transition: transform 0.4s ease;
+}
+
+.ember-gallery figure:hover img {
+	transform: scale(1.05);
+}
+
+.ember-gallery figure {
+	overflow: hidden;
+	border-radius: 14px;
+}
+
+/* Steam accent animation on hero badge */
+@keyframes ember-steam {
+	0% {
+		transform: translateY(0);
+		opacity: 0.6;
+	}
+	50% {
+		transform: translateY(-6px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 0.6;
+	}
+}
+
+.ember-steam {
+	display: inline-block;
+	animation: ember-steam 3s ease-in-out infinite;
+}
+
+/* Scroll reveal */
+.ember-reveal {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.ember-reveal.ember-visible {
+	opacity: 1;
+	transform: none;
+}
+
+/* Back-to-top button */
+.ember-back-top {
+	position: fixed;
+	right: 1.25rem;
+	bottom: 1.25rem;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	background: var(--wp--preset--color--caramel);
+	color: var(--wp--preset--color--espresso);
+	font-size: 1.25rem;
+	line-height: 1;
+	box-shadow: 0 8px 20px rgba(43, 29, 22, 0.3);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease, transform 0.2s ease;
+	z-index: 60;
+}
+
+.ember-back-top.ember-show {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.ember-back-top:hover {
+	transform: translateY(-3px);
+}
+
+/* Card frames */
+.ember-card {
+	border-radius: 16px;
+	transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.ember-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--wp--preset--shadow--warm-lg);
+}
+
+/* Testimonial quote mark */
+.ember-quote::before {
+	content: "\201C";
+	display: block;
+	font-family: var(--wp--preset--font-family--display);
+	font-size: 3rem;
+	line-height: 1;
+	color: var(--wp--preset--color--caramel);
+}
+
+/* Skip link */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	background: var(--wp--preset--color--espresso);
+	color: var(--wp--preset--color--cream);
+	padding: 0.75rem 1.25rem;
+	z-index: 100;
+	border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+	left: 0;
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible {
+	outline: 3px solid var(--wp--preset--color--caramel);
+	outline-offset: 2px;
+}
+
+/* Print: hide chrome */
+@media print {
+	.ember-back-top,
+	.site-header,
+	.site-footer {
+		display: none;
+	}
+}
