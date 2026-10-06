@@ -57,6 +57,16 @@ No plugins required. Google Fonts (Fraunces + Nunito Sans) load automatically; t
 ### 1.0.0
 - Initial release: 8 templates, 2 template parts, 10 block patterns, Matcha style variation, theme.js interactions, full a11y pass.
 
+## Design Previews
+![ember-main](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-main.png)
+![ember-menu](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-menu.png)
+![ember-mobile](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-mobile.png)
+![ember-matcha](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-matcha.png)
+![ember-baristas](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-baristas.png)
+![ember-gallery](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-gallery.png)
+![ember-visitus](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-visitus.png)
+![ember-testimonials](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/ember-testimonials.png)
+
 ## License
 
 GNU General Public License v2 or later — see `LICENSE`.
