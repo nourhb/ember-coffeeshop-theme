@@ -1,0 +1,37 @@
+/* Ember editor styles — keeps the block editor close to the front end. */
+
+body {
+	font-family: "Nunito Sans", -apple-system, sans-serif;
+	color: #2b1d16;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+	font-family: "Fraunces", Georgia, serif;
+}
+
+.is-style-menu-title {
+	font-family: "Fraunces", Georgia, serif;
+	letter-spacing: 0.02em;
+}
+
+.is-style-outline-caramel .wp-block-button__link {
+	border: 2px solid #c98a3d;
+	color: #c98a3d;
+	background: transparent;
+}
+
+.is-style-menu-card {
+	border: 1px solid #efe3d0;
+	border-radius: 16px;
+	padding: 1.5rem;
+	background: #fffdf8;
+}
+
+.is-style-roast-note {
+	border-left: 4px solid #c98a3d;
+	padding-left: 1.25rem;
+	font-style: italic;
+}
